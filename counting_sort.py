@@ -28,12 +28,12 @@ print("Lista não ordenada:", lista)
 
 tracemalloc.start()
 t_inicio = time.time()
-lista_ordenada = counting_sort(lista)
+counting_sort(lista)
 t_fim = time.time()
 memoria_atual, memoria_pico = tracemalloc.get_traced_memory()
 tracemalloc.stop()
 
-print("Lista ordenada: ", lista_ordenada)
+print("Lista ordenada: ", lista)
 print(f"tempo de execução: {t_fim-t_inicio:.6f} segundos")
 print(f"memória usada: {memoria_pico/1024:.3f} KB")
 
